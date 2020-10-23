@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: 'jdbc:mysql://127.0.0.1:3306/meetingshiro?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true'
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+    mvc:
+      view:
+        prefix: /
+        suffix: .jsp
+
+mybatis:
+  type-aliases-package: com.example.meetingdemo.pojo
+
+mapper:
+   mappers: com.example.meetingdemo.mapper.MessageMapper
+   identity: MYSQL
+
+
+
+pagehelper:
+  helper-dialect: mysql
+server:
+  port: 82
